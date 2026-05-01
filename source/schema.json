@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "properties": {
+    "urlList": {
+      "title": "Target URLs where blocked elements reside",
+      "description": "A list of URL patterns where the extension should execute its code (e.g., https://*.example.com/*).",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "title": "URL Pattern"
+      }
+    },
+    "elementQueries": {
+      "title": "Target Elements",
+      "description": "The queries used to identify blocked elements",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "title": "Element Query"
+      }
+    }
+  }
+}
