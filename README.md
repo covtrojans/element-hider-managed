@@ -95,3 +95,4 @@ Here is an example of using the allUrlsQuery property.
 
 - 1.0: First release! Yay!
 - 2.0: Added the ability to run a query on all websites using the "allUrlsQuery" property.
+-- 2.1: Fixed an issue where the All URLs script was initiating the observer before the HTML document was initiated.
