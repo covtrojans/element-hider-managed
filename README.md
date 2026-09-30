@@ -4,6 +4,8 @@ This is a chromium extension used to block specific elements on specific website
 ## How It Works
 This extension looks for a *urlList* and *elementQueries* array in the policy settings in Google Workspace. These settings are written in JSON. If the current URL matches something in the *urlList* array, a content script is ran. This script uses the document.querySelectorAll function to pull every HTML element that matches the corrisponding item in the *elementQueries* array. It may be good to read up on CSS selectors to understand what to search for: https://www.w3schools.com/cssref/css_selectors.php
 
+There is also the "allUrlsQuery" property which will be ran on every website. This is a simple string value, and not an array.
+
 ## Examples
 Here are some example policy settings.
 
@@ -79,6 +81,17 @@ Here is what it would look like to combine the last two examples. Be sure the ar
 }
 ```
 
+### All URLs Query
+Here is an example of using the allUrlsQuery property.
+```
+{
+	"allUrlsQuery": {
+		"Value": "div[class*='eagler']"
+	}
+}
+```
+
 ## Update Log
 
 - 1.0: First release! Yay!
+- 2.0: Added the ability to run a query on all websites using the "allUrlsQuery" property.

@@ -18,6 +18,11 @@
         "type": "string",
         "title": "Element Query"
       }
+    },
+    "allUrlsQuery": {
+      "title": "All URLs Elements",
+      "description": "The query ran on all URLs",
+      "type": "string"
     }
   }
 }
